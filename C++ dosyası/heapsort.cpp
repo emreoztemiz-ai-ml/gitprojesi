@@ -1,57 +1,3 @@
-# Heap Sort Algoritması
-
-
-##  Genel Bakış
-Heap Sort, karşılaştırmaya dayalı bir sıralama algoritmasıdır ve binary heap veri yapısını kullanır. Özellikle büyük veri kümelerinde etkilidir.
-
-## Algoritma Yapısı
-- **Veri Yapısı:** Binary Heap (Max-Heap veya Min-Heap)
-- **Tür:** Karşılaştırmalı Sıralamadır.
-- **Kategori:** Yerinde Sıralama yapar. (In-place)
-
-##  Zaman Karmaşıklığı
-| Durum          | Karmaşıklık |
-|----------------|-------------|
-| En Kötü Durum  | O(n log n)  |
-| Ortalama Durum | O(n log n)  |
-| En İyi Durum   | O(n log n)  |
-
-##  Uzay Karmaşıklığı
-- **O(1)**  Yerinde sıralama yapar.
-
-##  Temel Özellikler
-- **Kararlı Değil** (Stable sort değil)
-- **Divide and Conquer** yaklaşımı kullanır.
-- **Recursive** veya **iterative** olarak implemente edilebilir.
-
-##  Çalışma Prensibi
-1. **Max-Heap Oluşturma:** Dizi max-heap yapısına dönüştürülür.
-2. **Sıralama:** Kök eleman (en büyük) sürekli olarak dizinin sonuna yerleştirilir ve heap yeniden düzenlenir.
-
-##  Kullanım Alanları
-- Büyük veri setlerinin sıralanması 
-- Öncelik kuyruğu (priority queue) implementasyonları
-- Dijkstra ve Prim gibi algoritmalarda kullanılır.
-
-## Avantajları
-- Her durumda O(n log n) zaman karmaşıklığındadır.
-- Ek bellek gerektirmez. (in-place)
-- Büyük veriler için uygundur.
-
-## Dezavantajları
-- Küçük veri setlerinde verimsizdir.
-- Önbellek dostu değildir .(cache-unfriendly)
-- Kararlı sıralama değildir.
-
-## Performans Karşılaştırması
-|Algoritma  |En Kötü Durum| En İyi Durum | Yer karmaşıklığı|
-|-----------|-------------|--------------|-----------------------|
-|Heap Sort	|O(nlogn)     |O(nlogn)      |O(1)
-|Quick Sort	|O(n²)	      |O(nlogn)      |O(log n)
-|Merge Sort	|O(nlogn)     |O(nlogn)      |O(n)
-
-##  Örnek Kod (C++)
-```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -131,15 +77,3 @@ int main() {
 
     return 0;
 }
-```
-
-## Örnek Kod Çıktısı
-*  Kac eleman gireceksiniz? 5
-* 5 tane sayi giriniz:
-* 12 5 8 3 10
-
-* Siralama oncesi dizi: 12 5 8 3 10 
-* Siralama sonrası dizi: 3 5 8 10 12
-
-[HEAP SORT Animasyonu]
-[def]: (https://www.youtube.com/shorts/i7xGwTRarl0)
